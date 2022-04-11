@@ -1,0 +1,60 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#comments-container{
+    width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;   
+}
+
+.comment-container{
+    border: 1px solid rgb(132, 121, 158);
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    background-color: rgb(42, 38, 51);  
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;  
+}
+
+.responses-container{
+    margin-top: 10px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.responses-container .comment-container{
+    background-color: rgb(80, 79, 97);
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 600px;
+}
+
+.input{
+    padding: 5px 15px;
+    border: solid 1px rgb(132, 121, 158);
+    border-radius: 8px;
+    margin: 5px 0;
+}
+
+button{
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(210, 213, 255);
+    padding: 5px 15px;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-top: 3px;
+}
+
+button:hover{
+    background-color: rgb(31, 121, 238);
+    color: white;
+}
