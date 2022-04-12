@@ -61,6 +61,10 @@ function renderComments(arr, parent) {
 
         replyButton.addEventListener('click', e => {
 
+            let inputsAbiertos = document.getElementsByClassName("input");
+            for (let i = 1; i < inputsAbiertos.length; i++) {
+                inputsAbiertos[i].parentElement.removeChild(inputsAbiertos[i]);
+            }
             input.value = "";
             let newInput = inputContainer.cloneNode(true);
             newInput.addEventListener("keydown", e => {
