@@ -57,7 +57,17 @@ function renderComments(arr, parent) {
         const actionsContainer = document.createElement('div');
 
         replyButton.textContent = 'Reply';
-        likeButton.textContent = `${element.likes > 0 ? `${element.likes} likes` : 'like'}`;
+
+        let buttonText;
+        if (element.likes == 0) {
+            buttonText = "like";
+        } else if (element.likes == 1) {
+            buttonText = "1 like";
+        } else {
+            buttonText = `${element.likes} likes`;
+        }
+
+        likeButton.textContent = buttonText;
 
         replyButton.addEventListener('click', e => {
 
@@ -76,8 +86,17 @@ function renderComments(arr, parent) {
 
         likeButton.addEventListener('click', e => {
             element.likes++;
-            likeButton.textContent = `${element.likes > 0 ? `${element.likes} likes` : 'like'
-                }`;
+
+            if (element.likes == 0) {
+                buttonText = "like";
+            } else if (element.likes == 1) {
+                buttonText = "1 like";
+            } else {
+                buttonText = `${element.likes} likes`;
+            }    
+    
+            likeButton.textContent = buttonText;
+
         })
 
         commentsContainer.appendChild(textContainer);
